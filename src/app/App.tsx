@@ -432,7 +432,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── WHY US ─────────────────────────────────────────────── */}
+      {/* ── WHY US + MAPA ──────────────────────────────────────── */}
       <section id="nosotros" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -472,33 +472,40 @@ export default function App() {
 
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-primary/15 to-accent/15 rounded-3xl blur-3xl" />
-              <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&h=520&fit=crop&auto=format"
-                alt="Personas usando computadores en cibercafé"
-                className="relative w-full rounded-2xl object-cover border border-border"
+              <div
+                className="relative w-full rounded-2xl overflow-hidden border border-border"
                 style={{ aspectRatio: "4/3" }}
-              />
+              >
+                <iframe
+                  title="Ubicación de Internet Alex en Google Maps"
+                  src="https://maps.google.com/maps?q=-11.3272636,-74.5314245&z=16&output=embed"
+                  className="w-full h-full"
+                  style={{ border: 0, filter: "grayscale(0.15) contrast(1.05)" }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
               <div className="absolute bottom-4 left-4 right-4 bg-background/85 backdrop-blur-md rounded-xl p-3 border border-border flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/40">
-                  <MessageCircle className="w-5 h-5 text-primary-foreground" />
+                  <MapPin className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-foreground">¿Listo para tu recarga?</p>
-                  <p className="text-xs text-muted-foreground">Escríbenos ahora — respondemos al instante</p>
+                  <p className="text-xs font-bold text-foreground">¿Nos visitas?</p>
+                  <p className="text-xs text-muted-foreground">Mira cómo llegar en Google Maps</p>
                 </div>
-                <a
-                  href={waGeneral}
+                
+                 <a href="https://maps.app.goo.gl/w4hEHve5cLbBXEjm7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-auto text-xs bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
+                  className="ml-auto text-xs bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
                 >
-                  Ir al chat
+                  Cómo llegar
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section>         
 
       {/* ── FOOTER ─────────────────────────────────────────────── */}
       <footer id="contacto" className="bg-card border-t border-border pt-14 pb-8">
@@ -557,7 +564,7 @@ export default function App() {
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <MessageCircle className="w-4 h-4 flex-shrink-0" />
-                  +51 956 125 785
+                  +51 971 424 552
                 </a>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
