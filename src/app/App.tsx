@@ -12,7 +12,7 @@ import {
   Instagram, Facebook, Headphones,
 } from "lucide-react";
 
-const WA_NUMBER = "573001234567";
+const WA_NUMBER = "51971424552";
 
 function waLink(product: string, price: string) {
   const text = encodeURIComponent(`Hola, quiero comprar *${product}* - ${price} COP`);
